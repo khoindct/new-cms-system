@@ -43,7 +43,7 @@
                                     @method('DELETE')
                                     <button class="btn btn-danger">Delete</button>
                                 </form>
-                                </td>
+                            </td>
                         </tr>
                         @endforeach
                         </tbody>
@@ -51,12 +51,19 @@
                 </div>
             </div>
         </div>
+
+        <div class="d-flex">
+            <div class="mx-auto">
+                {{$posts->links()}}
+            </div>
+        </div>
+
     @endsection
 
     @section('scripts')
             <script src="{{asset('vendor/datatables/jquery.dataTables.js')}}"></script>
             <script src="{{asset('vendor/datatables/dataTables.bootstrap4.js')}}"></script>
-            <script src="{{asset('js/demo/datatables-demo.js')}}"></script>
+{{--            <script src="{{asset('js/demo/datatables-demo.js')}}"></script>--}}
     @endsection
 
 </x-admin-master>
