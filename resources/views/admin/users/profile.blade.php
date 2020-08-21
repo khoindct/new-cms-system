@@ -94,7 +94,7 @@
                                                 @csrf
                                                 @method('patch')
                                                 <input type="hidden" name="role" value="{{$role->id}}">
-                                                <button class="btn btn-primary">Attach</button>
+                                                <button class="btn btn-primary" @if($user->roles->contains($role)) disabled @endif>Attach</button>
                                             </form>
                                         </td>
                                         <td>
@@ -102,7 +102,7 @@
                                                 @csrf
                                                 @method('patch')
                                                 <input type="hidden" name="role" value="{{$role->id}}">
-                                                <button class="btn btn-danger">Detach</button>
+                                                <button class="btn btn-danger" @if(!$user->roles->contains($role)) disabled @endif>Detach</button>
                                             </form>
 
                                         </td>
