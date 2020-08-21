@@ -5,8 +5,8 @@
     </a>
     <div id="collapseUsers" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
         <div class="bg-white py-2 collapse-inner rounded">
-            <h6 class="collapse-header">POST:</h6>
-            <a class="collapse-item" href="#">Create a post</a>
+            <h6 class="collapse-header">USER:</h6>
+            <a class="collapse-item" href="#">Create a user</a>
             <a class="collapse-item" href="{{route('user.index')}}">View all users</a>
         </div>
     </div>

@@ -31,8 +31,8 @@
                                 <td>
                                     <img height="40px" src="{{$user->avatar}}" alt="">
                                 </td>
+                                <td><a href="{{route('user.profile.show', $user->id)}}">{{$user->name}}</a></td>
                                 <td>{{$user->username}}</td>
-                                <td>{{$user->name}}</td>
                                 <td>{{$user->created_at->diffForHumans()}}</td>
                                 <td>{{$user->updated_at->diffForHumans()}}</td>
                                 <td>
@@ -57,9 +57,9 @@
 {{--        </div>--}}
     @endsection
 
-        @section('scripts')
-            <script src="{{asset('vendor/datatables/jquery.dataTables.js')}}"></script>
-            <script src="{{asset('vendor/datatables/dataTables.bootstrap4.js')}}"></script>
-            <script src="{{asset('js/demo/datatables-demo.js')}}"></script>
-        @endsection
+    @section('scripts')
+        <script src="{{asset('vendor/datatables/jquery.dataTables.js')}}"></script>
+        <script src="{{asset('vendor/datatables/dataTables.bootstrap4.js')}}"></script>
+        <script src="{{asset('js/demo/datatables-demo.js')}}"></script>
+    @endsection
 </x-admin-master>

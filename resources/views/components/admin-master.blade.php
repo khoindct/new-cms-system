@@ -57,7 +57,10 @@
 
         <!-- Nav Item - Pages Collapse Menu -->
         <x-admin-sidebar-posts-link></x-admin-sidebar-posts-link>
+
+        @if(auth()->user()->userHasRole('admin'))
         <x-admin-sidebar-users-link></x-admin-sidebar-users-link>
+        @endif
 
 
         <!-- Nav Item - Utilities Collapse Menu -->
