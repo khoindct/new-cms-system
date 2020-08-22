@@ -64,4 +64,16 @@ class RoleController extends Controller
         session()->flash('role-delete', 'Role is deleted');
         return back();
     }
+
+    public function attach(Role $role)
+    {
+        $role->permissions()->attach(request('permission'));
+        return back();
+    }
+
+    public function detach(Role $role)
+    {
+        $role->permissions()->detach(request('permission'));
+        return back();
+    }
 }
